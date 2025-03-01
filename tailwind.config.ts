@@ -7,6 +7,7 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  prefix: "",
   theme: {
     extend: {
       colors: {
@@ -49,6 +50,15 @@ export default {
           "3": "hsl(var(--chart-3))",
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
+        },
+        svg: {
+          gray: "hsl(var(--svg-gray))",
+          skin: "hsl(var(--svg-skin))",
+          "gray-1": "hsl(var(--svg-gray-1))",
+          "gray-2": "hsl(var(--svg-gray-2))",
+          "gray-3": "hsl(var(--svg-gray-3))",
+          "blue-1": "hsl(var(--svg-blue-1))",
+          "blue-2": "hsl(var(--svg-blue-2))",
         },
       },
       borderRadius: {

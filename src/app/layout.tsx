@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import type { Metadata } from "next";
-import "../globals.css";
 import TopBar from "@/components/organisms/top-bar";
+import { ThemeProvider } from "@/components/providers/theme-provider";
+import "../globals.css";
+import Typography from "@/components/atoms/typography";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,9 +29,22 @@ export default function RootLayout({
           rel="stylesheet"
         ></link>
       </head>
-      <body className="flex flex-col pt-6">
-        <TopBar />
-        {children}
+      <body className="flex flex-col md:pt-6 bg-background min-h-screen">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <TopBar />
+          {children}
+
+          <footer className="flex gap-6 flex-wrap items-center justify-center p-4 mt-24 border-t w-full">
+            <Typography as="p" size={"xxs"} className="text-center font-thin">
+              © 2026 by Lingualoomm. Powered and secured by Lingualoomm
+            </Typography>
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );

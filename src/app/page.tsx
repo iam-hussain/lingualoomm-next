@@ -1,101 +1,102 @@
-import Image from "next/image";
+import { Button } from "@/components/atoms/button";
+import { Separator } from "@/components/atoms/separator";
+import Typography from "@/components/atoms/typography";
+import Certification from "@/components/svg/certification";
+import ReadingBook from "@/components/svg/reading-book";
+import ReadingTime from "@/components/svg/reading-time";
+import Teacher from "@/components/svg/teacher";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex w-full h-full flex-col px-6 justify-center items-center m-auto gap-4">
+      <section className="min-h-[calc(100vh-3.438rem)] md:min-h-[calc(100vh-4.938rem)] flex flex-col md:grid md:grid-cols-2 w-full h-auto m-auto justify-center items-center gap-6 py-6 max-w-7xl">
+        <ReadingTime className="max-w-lg m-auto mr-0" />
+        <div className="flex flex-col max-w-md text-center md:text-left gap-8 justify-center md:justify-start align-middle items-center md:items-start grow">
+          <div className="flex flex-col gap-1">
+            <Typography as="h1" size={"xl"} className="text-foreground/90">
+              Welcome to{" "}
+              <span className="font-brand text-primary">Lingualoomm</span>
+            </Typography>
+            <Typography as="p" size={"sub"}>
+              A platform for learning and teaching languages
+            </Typography>
+          </div>
+          <Typography size={"xs"} color={"light"}>
+            Unlock new cultures and opportunities with our live and online
+            courses in English, French, Japanese, German, Tamil, Hindi, and
+            more. Climb to fluency with expert instructors and interactive
+            lessons. Join us and take your first step upward.
+          </Typography>
+          <Button className="md:w-auto w-full">Request a quote</Button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+      <Separator className="mb-36" />
+      <section className="flex flex-col gap-8 md:gap-24 max-w-6xl">
+        <Typography as="h1" size={"xl"} className="text-center">
+          Why learn a language with{" "}
+          <span className="font-brand text-secondary">Lingualoomm</span>?
+        </Typography>
+        <div className="flex flex-col gap-8 md:gap-24 max-w-4xl">
+          <div className="p-4 flex flex-col md:flex-row gap-4 items-center">
+            <ReadingBook className="max-w-[300px] p-0" />
+            <div className="flex flex-col gap-4 md:text-left text-center">
+              <div className="flex flex-col">
+                <Typography as="h4" size={"lg"} className="text-foreground/90">
+                  Learn From Anywhere
+                </Typography>
+                <Typography as="p" size={"sub"}>
+                  Study on Your Terms
+                </Typography>
+              </div>
+              <Typography as="p" size={"xs"} className="text-foreground/80">
+                Access high-quality lessons wherever life takes you. Our
+                mobile-friendly platform lets you dive into interactive
+                exercises and comprehensive resources anytime, ensuring your
+                language learning journey remains uninterrupted—even on the go.
+              </Typography>
+            </div>
+          </div>
+          <div className="p-4 md:px-8 flex flex-col md:flex-row-reverse gap-4 items-center">
+            <Teacher className="max-w-[300px] p-0" />
+            <div className="flex flex-col gap-4 md:text-right text-center">
+              <div className="flex flex-col">
+                <Typography as="h4" size={"lg"} className="text-foreground/90">
+                  Live Classes with Experts
+                </Typography>
+                <Typography as="p" size={"sub"}>
+                  Engage in Real-Time
+                </Typography>
+              </div>
+              <Typography as="p" size={"xs"} className="text-foreground/80">
+                Experience the power of live, interactive sessions guided by
+                seasoned professionals. Participate in dynamic discussions, ask
+                questions on the spot, and receive personalized feedback that
+                accelerates your learning progress.
+              </Typography>
+            </div>
+          </div>
+          <div className="p-4 flex flex-col md:flex-row gap-4 items-center">
+            <Certification className="max-w-[300px] p-0" />
+            <div className="flex flex-col gap-4 md:text-left text-center">
+              <div className="flex flex-col">
+                <Typography as="h4" size={"lg"} className="text-foreground/90">
+                  Trusted Multilingual Instruction
+                </Typography>
+                <Typography as="p" size={"sub"}>
+                  Global Expertise at Your Fingertips
+                </Typography>
+              </div>
+              <Typography as="p" size={"xs"} className="text-foreground/80">
+                Rely on our network of over 40 experienced tutors who specialize
+                in multiple languages. With our trusted team, you&apos;ll
+                receive tailored support and guidance, empowering you to excel
+                in your language learning journey regardless of your chosen
+                language.
+              </Typography>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
