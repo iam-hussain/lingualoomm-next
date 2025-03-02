@@ -29,7 +29,7 @@ export default function RootLayout({
           rel="stylesheet"
         ></link>
       </head>
-      <body className="flex flex-col md:pt-6 bg-background min-h-screen">
+      <body className="flex flex-col pt-[1rem] md:pt-6 bg-background min-h-screen">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

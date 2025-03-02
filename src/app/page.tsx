@@ -9,7 +9,7 @@ import Teacher from "@/components/svg/teacher";
 export default function Home() {
   return (
     <div className="flex w-full h-full flex-col px-6 justify-center items-center m-auto gap-4">
-      <section className="min-h-[calc(100vh-3.438rem)] md:min-h-[calc(100vh-4.938rem)] flex flex-col md:grid md:grid-cols-2 w-full h-auto m-auto justify-center items-center gap-6 py-6 max-w-7xl">
+      <section className="min-h-[calc(100vh-4.438rem)] md:min-h-[calc(100vh-4.938rem)] flex flex-col md:grid md:grid-cols-2 w-full h-auto m-auto justify-center items-center gap-6 py-6 max-w-7xl">
         <ReadingTime className="max-w-lg m-auto mr-0" />
         <div className="flex flex-col max-w-md text-center md:text-left gap-8 justify-center md:justify-start align-middle items-center md:items-start grow">
           <div className="flex flex-col gap-1">
