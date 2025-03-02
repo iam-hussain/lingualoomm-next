@@ -37,6 +37,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TopBar />
+
           {children}
 
           <footer className="flex gap-6 flex-wrap items-center justify-center p-4 mt-24 border-t w-full">

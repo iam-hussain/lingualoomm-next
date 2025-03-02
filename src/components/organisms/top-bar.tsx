@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "../molecules/navigation";
+import { ThemeModeToggle } from "../molecules/theme-mode-toggle";
 
 function TopBar() {
   return (
@@ -8,6 +9,9 @@ function TopBar() {
         Lingualoomm
       </p>
       <Navigation />
+      <div className="md:hidden">
+        <ThemeModeToggle />
+      </div>
     </nav>
   );
 }

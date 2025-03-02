@@ -30,15 +30,15 @@ export default function Home() {
           <Button className="md:w-auto w-full">Request a quote</Button>
         </div>
       </section>
-      <Separator className="mb-36" />
+      <Separator className="m-0 mb-12 md:mb-36 py-0" />
       <section className="flex flex-col gap-8 md:gap-24 max-w-6xl">
         <Typography as="h1" size={"xl"} className="text-center">
           Why learn a language with{" "}
           <span className="font-brand text-secondary">Lingualoomm</span>?
         </Typography>
         <div className="flex flex-col gap-8 md:gap-24 max-w-4xl">
-          <div className="p-4 flex flex-col md:flex-row gap-4 items-center">
-            <ReadingBook className="max-w-[300px] p-0" />
+          <div className="p-4 flex flex-col md:flex-row gap-8 items-center">
+            <ReadingBook className="max-w-[200px] p-0" />
             <div className="flex flex-col gap-4 md:text-left text-center">
               <div className="flex flex-col">
                 <Typography as="h4" size={"lg"} className="text-foreground/90">
@@ -56,8 +56,8 @@ export default function Home() {
               </Typography>
             </div>
           </div>
-          <div className="p-4 md:px-8 flex flex-col md:flex-row-reverse gap-4 items-center">
-            <Teacher className="max-w-[300px] p-0" />
+          <div className="p-4 md:px-8 flex flex-col md:flex-row-reverse gap-2 items-center">
+            <Teacher className="max-w-[200px] p-0" />
             <div className="flex flex-col gap-4 md:text-right text-center">
               <div className="flex flex-col">
                 <Typography as="h4" size={"lg"} className="text-foreground/90">
@@ -75,8 +75,8 @@ export default function Home() {
               </Typography>
             </div>
           </div>
-          <div className="p-4 flex flex-col md:flex-row gap-4 items-center">
-            <Certification className="max-w-[300px] p-0" />
+          <div className="p-4 flex flex-col md:flex-row gap-8 items-center">
+            <Certification className="max-w-[200px] p-0" />
             <div className="flex flex-col gap-4 md:text-left text-center">
               <div className="flex flex-col">
                 <Typography as="h4" size={"lg"} className="text-foreground/90">
